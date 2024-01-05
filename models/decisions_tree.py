@@ -18,11 +18,6 @@ def create_decisions_tree_model(split, moment):
     y_test = test_dataset["class_name"]
 
     if split == "hold_out": 
-        '''
-        x_train, x_test, y_train, y_test = train_test_split(
-            x, y, train_size = 0.7, shuffle = True, random_state = 0, stratify = y
-        )
-        '''
         x_train, _, y_train, _ = train_test_split(
             x_train, y_train, train_size = 0.99, shuffle = True, random_state = 0, stratify = y_train
         )
