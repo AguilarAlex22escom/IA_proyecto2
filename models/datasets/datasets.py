@@ -1,7 +1,7 @@
-from moments.train_hu_moments import *
-from moments.test_hu_moments import *
-from moments.train_zernike_moments import *
-from moments.test_zernike_moments import *
+from ..moments.train_hu_moments import create_train_dataset_hu
+from ..moments.test_hu_moments import create_test_dataset_hu
+from ..moments.train_zernike_moments import create_train_dataset_zernike
+from ..moments.test_zernike_moments import create_test_dataset_zernike
 
 def create_datasets(train_path, test_path, moment):
     train_dataframe, test_dataframe = None, None
