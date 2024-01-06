@@ -2,3 +2,6 @@ opencv-python
 scikit-learn
 numpy
 pandas
+mahotas
+imutils
+scipy

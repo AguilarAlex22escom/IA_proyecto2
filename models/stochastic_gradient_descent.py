@@ -11,7 +11,7 @@ matrices = []
 def create_stochastic_gradient_descent_model(split, moment):
     print("Working with Stochastic Gradient Descent model...")
     train_dataset, test_dataset = create_datasets("shapes/train_dataset/", "shapes/test_dataset/", moment)
-    sgd = SGDClassifier(loss="hinge", penalty="12", max_iter=100)
+    sgd = SGDClassifier(loss="hinge", penalty="l2", max_iter=100)
 
     x_train = train_dataset.drop(["class_name"], axis = 1)
     x_test = test_dataset.drop(["class_name"], axis = 1)
