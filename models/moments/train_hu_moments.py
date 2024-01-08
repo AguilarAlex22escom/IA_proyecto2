@@ -17,9 +17,9 @@ def create_train_dataset_hu(path): # This function gets the directory path with 
             deffects = cv.convexityDefects(cnt, wrapper) 
             moments = cv.moments(cnt) # Get the image's moments with its first contour
             hu_moments = cv.HuMoments(moments).flatten() # Get the hu moments
-            '''
             x1, y1 = cnt[0,0]
             cv.drawContours(image,[cnt],-1, (44, 120, 200), 3)
+            '''
             print("Hu-Moments of first contour:\n", hu_moments)
                 cv.putText(image, 'Figure', (x1, y1), cv.FONT_HERSHEY_SIMPLEX, 0.6, (200, 120, 60), 2)
                 cv.imshow("Hu-Moments", image)

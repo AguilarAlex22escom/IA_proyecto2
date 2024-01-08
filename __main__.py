@@ -50,7 +50,8 @@ if __name__ == '__main__':
     svm_sgm.create_svm_sigmoid_model("hold_out", "hu"),
     svm_sgm.create_svm_sigmoid_model("10_cross", "hu"),
     svm_sgm.create_svm_sigmoid_model("hold_out", "zernike"),
-    svm_sgm.create_svm_sigmoid_model("10_cross", "zernike")]
+    svm_sgm.create_svm_sigmoid_model("10_cross", "zernike")
+    ]
     accuracies = pd.DataFrame(models_accuracies)
     print("Accuracies: ")
     print(accuracies.sort_values("Accuracy").tail())
